@@ -1,5 +1,5 @@
 {% set name = "yoyo-migrations" %}
-{% set version = "7.3.2" %}
+{% set version = "8.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/yoyo-migrations-{{ version }}.tar.gz
-  sha256: 44840828e1a0169f541e702d5aedca8185ada68087e7bad4850a6fc5d71e77a4
+  sha256: 91c92135ad0b29cfbc35de95e8179cd0d323bd1ebc1a8da5b6c402c26713994b
 
 build:
   number: 0
