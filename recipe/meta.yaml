@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/yoyo-migrations-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/yoyo-migrations-{{ version }}.tar.gz
   sha256: 44840828e1a0169f541e702d5aedca8185ada68087e7bad4850a6fc5d71e77a4
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - yoyo = yoyo.scripts.main:main
@@ -21,9 +21,9 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - sqlparse
     - tabulate
 
@@ -37,6 +37,7 @@ test:
     - yoyo-migrate --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://ollycope.com/software/yoyo/latest/
